@@ -28,7 +28,6 @@ RUN echo "secret is: $GOOGLE_MODEL_LIST"
 SECRET ENV ENABLED_OPENAI
 RUN echo "secret is: $ENABLED_OPENAI"
 RUN docker run -d -p 3210:3210 \
-  -e ACCESS_CODE=2310554246 \
   --name lobe-chat \
   lobehub/lobe-chat
 EXPOSE WEBSITE http://localhost:3210
