@@ -27,6 +27,8 @@ SECRET ENV OPENAI_MODEL_LIST
 RUN echo "secret is: $OPENAI_MODEL_LIST"
 SECRET ENV ENABLED_OPENAI
 RUN echo "secret is: $ENABLED_OPENAI"
+SECRET ENV provider
+RUN echo "secret is: $provider"
 RUN docker run -d -p 3210:3210 \
   --name lobe-chat \
   lobehub/lobe-chat
