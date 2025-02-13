@@ -17,7 +17,7 @@ RUN apt-get update && \
 # copy files from the repository into this staging server
 COPY . .
 
-RUN docker build -t image .
+
 RUN docker run -d -p 3210:3210 \
   -e ACCESS_CODE=2310554246 \
   --name lobe-chat \
