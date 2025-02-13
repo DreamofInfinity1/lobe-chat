@@ -19,6 +19,10 @@ COPY . .
 
 SECRET ENV ACCESS_CODE
 RUN echo "secret is: $ACCESS_CODE"
+SECRET ENV OPENAI_API_KEY
+RUN echo "secret is: $OPENAI_API_KEY"
+SECRET ENV OPENAI_PROXY_URL
+RUN echo "secret is: $OPENAI_PROXY_URL"
 RUN docker run -d -p 3210:3210 \
   -e ACCESS_CODE=2310554246 \
   --name lobe-chat \
